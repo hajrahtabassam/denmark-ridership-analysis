@@ -70,18 +70,46 @@ Plots are created using `matplotlib` and `seaborn`.
 
 1. Open the notebook:
 notebooks/analysis.ipynb2. 
-Install required packages if needed:
+2. Install required packages if needed:
 ```python
 pip install pandas matplotlib seaborn
-
-Run the notebook cells in order to reproduce the analysis.
-
-## Notes
+```
+3. Run the notebook cells in order to reproduce the analysis.
+## 🧠 Notes
 
 This project intentionally uses real, messy data to reflect realistic data science workflows.
 
 Some years contain missing values for certain transport modes due to data availability.
 
 The focus is on data cleaning, reasoning, and reproducibility rather than perfect datasets.
+## Key Findings
 
-This project was created as a learning and portfolio exercise in modern data analysis using Python and pandas.
+Passenger volumes across rail, ferry, and air transport show a sharp decline in 2020, corresponding to COVID-19 restrictions.
+
+Air travel experienced the strongest relative drop, while rail recovered faster post-2021.
+
+By 2023–2024, all modes show recovery trends, though air travel exceeds pre-pandemic levels more slowly.
+## 2️⃣ Visualization Discussion
+Passenger Trends (2015–2024)
+
+The line plot compares yearly passenger volumes for rail, ferry, and air transport in Denmark.
+
+A clear structural break is visible in 2020, reflecting the impact of COVID-19 travel restrictions. The gradual recovery from 2021 onward differs by transport mode, highlighting varying resilience across sectors.
+## 3️⃣ Data Limitations
+
+Rail data is aggregated from quarterly statistics, while ferry and air data are yearly totals.
+
+The analysis does not distinguish between domestic and international passengers.
+
+Passenger numbers are aggregated nationally and do not reflect regional variation.
+## Reproducibility
+
+All processed datasets are saved in the data/processed/ directory.
+The analysis can be reproduced by running the notebook from top to bottom after installing the listed dependencies.
+## Future Work
+
+Extend the analysis with monthly or route-level data
+
+Compare Denmark with other Nordic countries
+
+Investigate correlations with fuel prices or policy 
