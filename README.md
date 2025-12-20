@@ -89,13 +89,12 @@ Passenger volumes across rail, ferry, and air transport show a sharp decline in 
 Air travel experienced the strongest relative drop, while rail recovered faster post-2021.
 
 By 2023–2024, all modes show recovery trends, though air travel exceeds pre-pandemic levels more slowly.
-## 2️⃣ Visualization Discussion
-Passenger Trends (2015–2024)
-
+## Visualization Discussion
+![Passenger trends by transport mode](figures/passenger_trends.png)
 The line plot compares yearly passenger volumes for rail, ferry, and air transport in Denmark.
 
 A clear structural break is visible in 2020, reflecting the impact of COVID-19 travel restrictions. The gradual recovery from 2021 onward differs by transport mode, highlighting varying resilience across sectors.
-## 3️⃣ Data Limitations
+##  Data Limitations
 
 Rail data is aggregated from quarterly statistics, while ferry and air data are yearly totals.
 
@@ -113,3 +112,10 @@ Extend the analysis with monthly or route-level data
 Compare Denmark with other Nordic countries
 
 Investigate correlations with fuel prices or policy 
+## Skills Demonstrated
+
+- Data cleaning and reshaping with pandas
+- Working with real-world public datasets
+- Time-series aggregation (quarterly → yearly)
+- Exploratory data analysis and visualization
+- Clear documentation and reproducible analysis
