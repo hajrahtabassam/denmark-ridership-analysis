@@ -1,1 +1,87 @@
-# denmark-ridership-analysis
+# Passenger Transport Trends in Denmark (2015–2025)
+
+This project analyzes long-term trends in passenger transport in Denmark across three major modes:
+- 🚆 Rail
+- ⛴ Ferry
+- ✈️ Air
+
+The goal is to clean, harmonize, and analyze real-world public statistics data and visualize how passenger volumes have evolved over time.
+
+---
+
+## 📊 Data Sources
+
+All datasets are publicly available statistics from **Statistics Denmark (StatBank)**:
+
+- Rail passenger transport (quarterly data)
+- Ferry passenger transport (yearly data)
+- Air passenger transport (yearly data)
+
+The raw CSV files use StatBank’s export format, which includes:
+- Non-standard separators (`;`)
+- Multiple header and metadata rows
+- Missing or placeholder values
+
+Handling this structure is part of the analysis.
+
+---
+
+## 🧹 Data Processing
+
+The following steps were performed:
+
+1. Manual parsing of StatBank CSV files using Python’s `csv` module
+2. Extraction of correct header rows and data rows
+3. Conversion of quarterly data into yearly totals
+4. Safe handling of missing or non-numeric values (`NaN`)
+5. Standardization of all datasets into a tidy format:
+
+## year | passengers_million | mode
+6. Merging rail, ferry, and air datasets into a single dataset
+
+The final cleaned dataset is saved as:
+
+data/all_transport_yearly.csv
+
+---
+
+## 📈 Analysis & Visualization
+
+The analysis notebook includes:
+- Line plots showing long-term trends by transport mode
+- Comparison of passenger volumes across rail, ferry, and air
+- Identification of disruptions and recovery patterns (e.g. COVID-19 impact)
+
+Plots are created using `matplotlib` and `seaborn`.
+
+---
+
+## 📁 Repository Structure
+
+├── data/
+│ ├── all_transport_yearly.csv
+│ └── raw StatBank CSV files
+├── notebooks/
+│ └── analysis.ipynb
+├── README.md
+---
+
+## ▶️ How to Run
+
+1. Open the notebook:
+notebooks/analysis.ipynb2. 
+Install required packages if needed:
+```python
+pip install pandas matplotlib seaborn
+
+Run the notebook cells in order to reproduce the analysis.
+
+## Notes
+
+This project intentionally uses real, messy data to reflect realistic data science workflows.
+
+Some years contain missing values for certain transport modes due to data availability.
+
+The focus is on data cleaning, reasoning, and reproducibility rather than perfect datasets.
+
+This project was created as a learning and portfolio exercise in modern data analysis using Python and pandas.
